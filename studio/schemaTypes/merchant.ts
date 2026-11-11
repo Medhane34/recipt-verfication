@@ -9,19 +9,19 @@ export default defineType({
             name: 'name',
             title: 'Merchant Name',
             type: 'string',
-            validation: (Rule) => Rule.required(),
+            validation: (Rule: { required: () => any }) => Rule.required(),
         }),
         defineField({
             name: 'tin',
             title: 'TIN (Taxpayer Identification Number)',
             type: 'string',
-            validation: (Rule) => Rule.required(),
+            validation: (Rule: { required: () => any }) => Rule.required(),
         }),
         defineField({
             name: 'taxCenter',
             title: 'Tax Center / Branch',
             type: 'string',
-            validation: (Rule) => Rule.required(),
+            validation: (Rule: { required: () => any }) => Rule.required(),
         }),
         defineField({
             name: 'status',
@@ -35,7 +35,7 @@ export default defineType({
                 layout: 'radio',
             },
             initialValue: 'active',
-            validation: (Rule) => Rule.required(),
+            validation: (Rule: { required: () => any }) => Rule.required(),
         }),
         defineField({
             name: 'phone',
